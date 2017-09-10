@@ -1,0 +1,27 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/clipboard.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/popup.js"></script>
+	</head>
+	<body style="width:300px;padding:10px;">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="form-group" id="formGroup" style="margin-bottom:none;">
+					<label class="control-label" for="sidInput">Salesforce Session Id <span class="badge hidden" id="sfUserDetails"></span></label>
+					<div class="input-group">
+						<input type="text" class="form-control" id="sidInput" name="sidInput" disabled style="height: 28px;" placeholder="No salesforce session id detected!" aria-describedby="helpBlock"/>
+						<div class="input-group-btn">
+							<button class="btn btn-default" id="copyButton" type="button" disabled title="Copy to clipboard" data-clipboard-target="#sidInput">
+								<span class="glyphicon glyphicon-copy" aria-hidden="true" style="margin-top:-2px;height: 16px;"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

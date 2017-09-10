@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Get Salesforce Session Id",
+  "version": "0.0.1",
+  "description": "Get the Salesforce Session Id stored as a cookie.",
+  "author": "Tiaan Swart",
+  "homepage_url": "http://path/to/homepage",
+  "icons" : {
+    "16": "img/color16.png",
+    "48": "img/color48.png",
+    "64": "img/color48.png",
+    "128": "img/color128.png"
+  },
+  "browser_action": {
+    "default_icon": "img/black.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [ "tabs", "cookies", "storage", "https://*.force.com/*", "https://*.salesforce.com/*" ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "background": {
+    "scripts": [ "js/background.js" ]
+  },
+  "content_scripts": [{
+     "js": [ "js/jquery-1.11.2.min.js", "js/forcetk.min.js", "js/contentScript.js" ],
+     "matches": [ "https://*.salesforce.com/*", "https://*.force.com/*" ]
+  }]
+}
